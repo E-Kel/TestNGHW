@@ -43,7 +43,7 @@ public class TestNGTests {
         LOGGER.info(String.format("I'm %s! Execute me!", LOGGER.getName()));
     }
 
-    @Test
+    @Test(priority = 1)
     public void getKidNameShouldReturnNamesOfYoungerThan18() {
         Person sara = new Person("Sara", 4);
         Person viktor = new Person("Viktor", 40);
@@ -58,7 +58,7 @@ public class TestNGTests {
                 .containsAll(asList("Viktor", "Eva")));
     }
 
-    @Test
+    @Test(priority = 3)
     public void toStringShouldReturnPeopleNamesSeparatedByComma() {
         Person sara = new Person("Sara", 4);
         Person viktor = new Person("Viktor", 40);
@@ -70,7 +70,7 @@ public class TestNGTests {
     }
 
 
-    @Test
+    @Test(priority =2)
     public void getOldestPersonShouldReturnOldestPerson() {
         Person sara = new Person("Sara", 4);
         Person viktor = new Person("Viktor", 40);
